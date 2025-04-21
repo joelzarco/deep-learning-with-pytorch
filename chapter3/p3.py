@@ -24,7 +24,7 @@ class Net(nn.Module):
         return out
 
 #p4
-# define GRU layer
+# define GRU layer 
 class Net(nn.Module):
     def __init__(self):
         super().__init__()
