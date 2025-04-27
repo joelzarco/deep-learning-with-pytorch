@@ -20,3 +20,6 @@ class BinaryImageClassifier(nn.Module):
         
         # Create an activation function
         self.sigmoid = nn.Sigmoid(x)
+
+# Notice that the fully connected (fc) layer has an input size of 16x32x32. This is due to the original image input size being 64x64.
+# After passing through the max pooling layer, the spatial dimensions are reduced in half, resulting in 32x32
