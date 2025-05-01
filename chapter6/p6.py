@@ -16,3 +16,17 @@ classifier = nn.Sequential(
 	# Add the output dimension to the classifier
 	nn.Linear(512, num_classes),
 )
+
+# part2 Box regressor block
+# Your final task is to create a regressor block to predict bounding box coordinates
+
+# Define the number of coordinates
+num_coordinates = 4
+
+bb = nn.Sequential(  
+	# Add input and output dimensions
+	nn.Linear(input_dim, 32),
+	nn.ReLU(),
+	# Add the output for the last regression layer
+	nn.Linear(32, num_coordinates),
+)
